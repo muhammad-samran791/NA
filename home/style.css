@@ -1,0 +1,242 @@
+/* Header Styling */
+header {
+  position: relative;
+  height: 100vmin;
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+    url(../images/hero-img.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em 0em;
+  padding: 0em 0.2em;
+}
+
+.header-content h1 {
+  color: white;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-content p {
+  color: white;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-content a {
+  display: block;
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ff4a50;
+}
+
+.header-content a:hover {
+  background: #ddd;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  animation: scroll-animation 1s linear infinite alternate;
+}
+
+@keyframes scroll-animation {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(-50%, 10%);
+  }
+}
+
+.scroll figure {
+  width: 5vw;
+  height: 5vw;
+}
+
+/* Media Query */
+@media (max-width: 850px) and (orientation: portrait) {
+  .header-content {
+    width: 80%;
+  }
+}
+
+/* Show Case Section Styling */
+#places {
+  padding-top: 5em;
+}
+
+#places .place-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4em 0em;
+}
+
+#places .place-items .place-item {
+  display: flex;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0em 0em 2em 0em rgba(0, 0, 0, 1);
+}
+
+#places .place-items .place-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+#places .place-items .place-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+#places .place-items .place-item figure,
+#places .place-items .place-item .place-content {
+  width: 50%;
+}
+
+#places .place-items .place-item figure {
+  height: 400px;
+}
+
+#places .place-items .place-item .place-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ddd;
+  padding: 2em 1em;
+}
+
+#places .place-items .place-item .place-content h1 {
+  letter-spacing: 0.1em;
+}
+
+#places .place-items .place-item .place-content p {
+  letter-spacing: 0.1em;
+  color: #393939;
+}
+
+#places .place-items .place-item .place-content a {
+  color: #ff4a50;
+  border: 3px solid #ff4a50;
+  border-radius: 50px;
+  padding: 0.5em 2em;
+  width: fit-content;
+}
+
+#places .place-items .place-item .place-content a:hover {
+  color: white;
+  background: #ff4a50;
+}
+
+/* Media Query */
+@media (max-width: 850px) and (orientation: portrait) {
+  #places .place-items .place-item {
+    flex-direction: column !important;
+  }
+
+  #places .place-items .place-item figure,
+  #places .place-items .place-item .place-content {
+    width: 100%;
+  }
+
+  #places .place-items .place-item .place-content {
+    gap: 2em 0em;
+  }
+
+  #places .place-items .place-item .place-content h1 {
+    text-align: center;
+  }
+
+  #places .place-items .place-item .place-content p {
+    text-align: center;
+  }
+
+  #places .place-items .place-item .place-content a {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) and (orientation: portrait) {
+  #places .place-items .place-item figure {
+    height: 200px;
+  }
+}
+
+/* Services Section Styling */
+#services {
+  padding: 5em 0em;
+}
+
+#services .services-items {
+  display: flex;
+  gap: 0em 2em;
+}
+
+#services .services-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em 0em;
+  padding: 2em 1em;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0em 0em 2em 0em rgba(0, 0, 0, 1);
+}
+
+#services .services-item:nth-child(even) {
+  background: #ff4a50;
+}
+
+#services .services-item:nth-child(odd) {
+  background: #263238;
+}
+
+#services .services-item:nth-child(even) i {
+  color: white;
+}
+
+#services .services-item:nth-child(odd) i {
+  color: #ff4a50;
+}
+
+#services .services-item h1 {
+  letter-spacing: 0.1em;
+}
+
+#services .services-item p {
+  letter-spacing: 0.1em;
+}
+
+/* Media Query */
+@media (max-width: 850px) and (orientation: portrait) {
+  #services .services-items {
+    display: flex;
+    flex-direction: column;
+    gap: 3em 0em;
+  }
+
+  #services .services-item {
+    gap: 2em 0em;
+    padding: 4em 1em;
+  }
+}
